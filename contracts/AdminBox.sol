@@ -28,7 +28,15 @@ contract AdminBox is Initializable {
     emit ValueChanged(value);
   }
   
+  function decreament() public {
+    _value -=1;
+    emit ValueChanged(_value);
+  }
   
+  function increament() public {
+    _value += 1;
+    emit ValueChanged(_value);
+  }  
   function retrieve() public view returns (uint256) {
     return _value;
   }

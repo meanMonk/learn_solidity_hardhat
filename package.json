@@ -14,6 +14,7 @@
     "deploy:u": "npx hardhat run --network sepolia scripts/deploy_upgradeable_box.ts",
     "deploy:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_box.ts",
     "deploy:ab:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_adminbox.ts",
+    "deploy:ab:c:l": "npx hardhat run --network localhost scripts/update_adminbox.ts",
     "execute": "npx hardhat run --network sepolia scripts/index.ts",
     "console": "npx hardhat console --network localhost"
   },
