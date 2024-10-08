@@ -17,3 +17,18 @@ npx hardhat ignition deploy ./ignition/modules/Lock.ts
 ```shell
 pnpm build:contracts
 ```
+
+
+
+## Interact with Console.
+
+```shell
+# get contract deployed.
+const box = await viem.getContractAt("Box", "0x5fbdb2315678afecb367f032d93f642f64180aa3");
+
+# send tx to store value
+await box.write.storeValue([20]);
+# retrieve value
+await box.write.retrieveValue();
+
+````
