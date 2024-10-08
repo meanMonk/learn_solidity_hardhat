@@ -10,9 +10,9 @@
     "build": "pnpm build:contracts",
     "build:contracts": "npx hardhat compile",
     "start:node": "npx hardhat node",
-    "deploy": "npx hardhat run --network localhost scripts/deploy.ts",
-    "execute": "npx hardhat run --network localhost scripts/index.ts",
-    "console": "npx hardhat console --network localhost"
+    "deploy": "npx hardhat run --network sepolia scripts/deploy.ts",
+    "execute": "npx hardhat run --network sepolia scripts/index.ts",
+    "console": "npx hardhat console --network sepolia"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "@openzeppelin/test-helpers": "^0.5.16",
     "@types/chai": "^5.0.0",
     "chai": "4.3.7",
+    "dotenv": "^16.4.5",
     "ethers": "^6.13.3"
   }
 }

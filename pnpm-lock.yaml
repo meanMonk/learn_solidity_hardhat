@@ -30,6 +30,9 @@ importers:
       chai:
         specifier: 4.3.7
         version: 4.3.7
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       ethers:
         specifier: ^6.13.3
         version: 6.13.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
@@ -1229,6 +1232,10 @@ packages:
 
   dot-case@2.1.1:
     resolution: {integrity: sha512-HnM6ZlFqcajLsyudHq7LeeLDr2rFAVYtDv/hV5qchQEidSck8j9OPUsXY9KwJv/lHMtYlX4DjRQqwFYa+0r8Ug==}
+
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
 
   ecc-jsbn@0.1.2:
     resolution: {integrity: sha512-eh9O+hwRHNbG4BLTjEl3nw044CkGm5X6LoaCf7LPp7UU8Qrt47JYNi6nPX8xjW97TKGKm1ouctg0QSpZe9qrnw==}
@@ -5014,6 +5021,8 @@ snapshots:
   dot-case@2.1.1:
     dependencies:
       no-case: 2.3.2
+
+  dotenv@16.4.5: {}
 
   ecc-jsbn@0.1.2:
     dependencies:
