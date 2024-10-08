@@ -61,3 +61,9 @@ pnpm run deploy
 ```shell
 npx hardhat verify --network sepolia $DEPLOYED_CONTRACT_ADDRESS
 ```
+
+## To upgradeable local.
+
+```shell
+npx hardhat deploy:u:l
+```

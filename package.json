@@ -11,14 +11,18 @@
     "build:contracts": "npx hardhat compile",
     "start:node": "npx hardhat node",
     "deploy": "npx hardhat run --network sepolia scripts/deploy.ts",
+    "deploy:u": "npx hardhat run --network sepolia scripts/deploy_upgradeable_box.ts",
+    "deploy:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_box.ts",
+    "deploy:ab:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_adminbox.ts",
     "execute": "npx hardhat run --network sepolia scripts/index.ts",
-    "console": "npx hardhat console --network sepolia"
+    "console": "npx hardhat console --network localhost"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/contracts-upgradeable": "^5.0.2",
     "hardhat": "^2.22.12"
   },
   "devDependencies": {

@@ -1,6 +1,8 @@
 import type { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-verify";
+import "@openzeppelin/hardhat-upgrades";
+
 require('dotenv').config();
 
 const config: HardhatUserConfig = {
