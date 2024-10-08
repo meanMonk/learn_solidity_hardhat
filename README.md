@@ -51,6 +51,13 @@ account: 0x344fFFaD1923C5431C7c55858d144546c5fEc04b
 deploying box...!
 Box contract deployed...!
 box deployed at:  0xefA5CB15D375d9B697b3C07D09e0059d15b0aD16
-
+```
+## To deploy contract on sepolia.
+```shell
+pnpm run deploy
 ```
 
+## To verify contract on sepolia.
+```shell
+npx hardhat verify --network sepolia $DEPLOYED_CONTRACT_ADDRESS
+```
