@@ -32,3 +32,13 @@ await box.write.storeValue([20]);
 await box.write.retrieveValue();
 
 ````
+
+## To run the script
+```shell
+  pnpm run deploy
+```
+
+## To run test 
+```shell
+  pnpm run test
+```

@@ -1,27 +1,26 @@
-import { viem } from "hardhat";
-
-const BoxContractAddress = "0x5fbdb2315678afecb367f032d93f642f64180aa3"
+import { ethers } from "hardhat";
+const boxAddress = "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
 
 async function main() {
   // code goes here to interact with contract.
   // retrieve list of enabled accounts from the local node.
-
-  const accounts = await viem.getWalletClients()
-  // console.log(`list of accounts`, accounts);
-  const addresses = accounts.map((acc) => {
-    return acc.account.address;
+  const accounts = (await ethers.getSigners()).map((sign) => {
+    return sign.address
   })
-  console.log(`addresses`, addresses);
 
-  const box = await viem.getContractAt("contracts/Box.sol:Box", BoxContractAddress);
+  console.log(`Accounts`, accounts);
 
-  let value = await box.read.retrieveValue();
-  console.log(`box value is ${value.toString()}`);
-  console.log(`update value by 2`);
-  let input = BigInt(Number(value) * 2);
-  await box.write.storeValue([input]);
-  value = await box.read.retrieveValue();
-  console.log(`updated box value is ${value.toString()}`);
+  const Box = await ethers.getContractFactory("Box");
+
+  const box = Box.attach(boxAddress);
+  let value = await box.retrieveValue();
+  console.log(`box value is ${value} ${value.toString()}`);
+  // let input = Number(value) * 2;
+  // await box.storeValue([ethers.toBigInt(input)]);
+  // value = await box.retrieveValue();̦
+  // console.log(`updated box value is ${value.toString()}`);
+  // let value = await box.read.retrieveValue();
+  // console.log(`update value by 2`);
 
 }
 

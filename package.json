@@ -2,13 +2,17 @@
   "name": "explore-solidity-oz",
   "version": "1.0.0",
   "description": "explore solidity in depth from openzepling tutorials.",
+  "files": [
+    "test/**/Box.test.ts"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx hardhat test",
     "build": "pnpm build:contracts",
     "build:contracts": "npx hardhat compile",
-    "start:node":"npx hardhat node",
+    "start:node": "npx hardhat node",
     "deploy": "npx hardhat run --network localhost scripts/deploy.ts",
-    "console":"npx hardhat console --network localhost"
+    "execute": "npx hardhat run --network localhost scripts/index.ts",
+    "console": "npx hardhat console --network localhost"
   },
   "keywords": [],
   "author": "",
@@ -18,8 +22,11 @@
     "hardhat": "^2.22.12"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
-    "@nomicfoundation/hardhat-viem": "^2.0.5",
-    "viem": "2.21.19"
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@types/chai": "^5.0.0",
+    "chai": "4.3.7",
+    "ethers": "^6.13.3"
   }
 }

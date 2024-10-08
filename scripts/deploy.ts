@@ -1,11 +1,15 @@
-import { viem } from "hardhat";
+import { ethers } from "hardhat";
+
 
 // deploy script.
 async function main() {
   // we get the contract to deploy.
+  const Box = await ethers.getContractFactory("Box");
   console.log(`deploying box...!`);
-  const box = await viem.deployContract("contracts/Box.sol:Box");
-  console.log(`box deployed at : `, box.address);
+  const box = await Box.deploy();
+  console.log(`Box contract deployed...!`);
+  await box.waitForDeployment();
+  console.log(`box deployed at: `, await box.getAddress());
 }
 
 
