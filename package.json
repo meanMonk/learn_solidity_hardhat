@@ -1,0 +1,19 @@
+{
+  "name": "explore-solidity-oz",
+  "version": "1.0.0",
+  "description": "explore solidity in depth from openzepling tutorials.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:contracts": "npx hardhat compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "hardhat": "^2.22.12"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0"
+  }
+}
