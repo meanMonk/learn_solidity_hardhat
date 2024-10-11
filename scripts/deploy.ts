@@ -4,7 +4,7 @@ import { ethers } from "hardhat";
 // deploy script.
 async function main() {
   // we get the contract to deploy.
-  const Box = await ethers.getContractFactory("Box");
+  const Box = await ethers.getContractFactory("contracts/Box.sol:Box");
   console.log(`deploying box...!`);
   const box = await Box.deploy();
   console.log(`Box contract deployed...!`);

@@ -10,7 +10,7 @@
     "build": "pnpm build:contracts",
     "build:contracts": "npx hardhat compile",
     "start:node": "npx hardhat node",
-    "deploy": "npx hardhat run --network sepolia scripts/deploy.ts",
+    "deploy": "npx hardhat run --network localhost scripts/deploy.ts",
     "deploy:u": "npx hardhat run --network sepolia scripts/deploy_upgradeable_box.ts",
     "deploy:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_box.ts",
     "deploy:ab:u:l": "npx hardhat run --network localhost scripts/deploy_upgradeable_adminbox.ts",

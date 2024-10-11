@@ -1,10 +1,15 @@
 import { ethers, upgrades } from "hardhat";
 
-
+const hre = require("hardhat")
 async function main() {
   const accounts = (await ethers.getSigners()).map((sign) => {
     return sign.address
   })
+
+  const provider = ethers.provider
+  const network = hre.network
+
+  console.log(`Network name=${network?.name}`)
 
   console.log(`Accounts`, accounts);
   const Box = await ethers.getContractFactory("AdminBox");
